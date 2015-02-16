@@ -10,22 +10,26 @@
 	<string>ios_tesseract</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>79932FF478939D8B14EA490092E8122254EC8FD7</key>
+		<string>https://github.com/anooptomar1/ios-tesseract.git</string>
 		<key>F8D5CCC0B848103AC2897358123470ADD4BF6303</key>
 		<string>https://bitbucket.org/anooptomar/bt-car.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ios_tesseract/ios_tesseract.xcodeproj</string>
+	<string>ios_tesseract.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>79932FF478939D8B14EA490092E8122254EC8FD7</key>
+		<string>../..</string>
 		<key>F8D5CCC0B848103AC2897358123470ADD4BF6303</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/anooptomar/bt-car.git</string>
+	<string>https://github.com/anooptomar1/ios-tesseract.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F8D5CCC0B848103AC2897358123470ADD4BF6303</string>
+	<string>79932FF478939D8B14EA490092E8122254EC8FD7</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -34,7 +38,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>F8D5CCC0B848103AC2897358123470ADD4BF6303</string>
 			<key>IDESourceControlWCCName</key>
-			<string>bitbucket</string>
+			<string>..</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>79932FF478939D8B14EA490092E8122254EC8FD7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-tesseract</string>
 		</dict>
 	</array>
 </dict>

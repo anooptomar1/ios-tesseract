@@ -13,6 +13,10 @@
 		894612321A92950F0013183F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894612311A92950F0013183F /* Images.xcassets */; };
 		894612351A92950F0013183F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894612331A92950F0013183F /* LaunchScreen.xib */; };
 		894612411A92950F0013183F /* ios_tesseractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894612401A92950F0013183F /* ios_tesseractTests.swift */; };
+		8946124B1A9295CC0013183F /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8946124A1A9295CC0013183F /* TesseractOCR.framework */; };
+		8946124D1A9295E30013183F /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 8946124C1A9295E30013183F /* tessdata */; };
+		8946124F1A9296390013183F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8946124E1A9296390013183F /* CoreImage.framework */; };
+		894612511A92964D0013183F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 894612501A92964D0013183F /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,11 @@
 		8946123A1A92950F0013183F /* ios_tesseractTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios_tesseractTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8946123F1A92950F0013183F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894612401A92950F0013183F /* ios_tesseractTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_tesseractTests.swift; sourceTree = "<group>"; };
+		8946124A1A9295CC0013183F /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
+		8946124C1A9295E30013183F /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		8946124E1A9296390013183F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		894612501A92964D0013183F /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		894612521A92971F0013183F /* ios_tesseract-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios_tesseract-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894612511A92964D0013183F /* libstdc++.dylib in Frameworks */,
+				8946124F1A9296390013183F /* CoreImage.framework in Frameworks */,
+				8946124B1A9295CC0013183F /* TesseractOCR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +71,8 @@
 		8946121C1A92950F0013183F = {
 			isa = PBXGroup;
 			children = (
+				894612501A92964D0013183F /* libstdc++.dylib */,
+				8946124E1A9296390013183F /* CoreImage.framework */,
 				894612271A92950F0013183F /* ios_tesseract */,
 				8946123D1A92950F0013183F /* ios_tesseractTests */,
 				894612261A92950F0013183F /* Products */,
@@ -77,12 +91,14 @@
 		894612271A92950F0013183F /* ios_tesseract */ = {
 			isa = PBXGroup;
 			children = (
+				8946124A1A9295CC0013183F /* TesseractOCR.framework */,
 				8946122A1A92950F0013183F /* AppDelegate.swift */,
 				8946122C1A92950F0013183F /* ViewController.swift */,
 				8946122E1A92950F0013183F /* Main.storyboard */,
 				894612311A92950F0013183F /* Images.xcassets */,
 				894612331A92950F0013183F /* LaunchScreen.xib */,
 				894612281A92950F0013183F /* Supporting Files */,
+				894612521A92971F0013183F /* ios_tesseract-Bridging-Header.h */,
 			);
 			path = ios_tesseract;
 			sourceTree = "<group>";
@@ -90,6 +106,7 @@
 		894612281A92950F0013183F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8946124C1A9295E30013183F /* tessdata */,
 				894612291A92950F0013183F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -193,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				894612301A92950F0013183F /* Main.storyboard in Resources */,
+				8946124D1A9295E30013183F /* tessdata in Resources */,
 				894612351A92950F0013183F /* LaunchScreen.xib in Resources */,
 				894612321A92950F0013183F /* Images.xcassets in Resources */,
 			);
@@ -336,9 +354,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios_tesseract",
+				);
 				INFOPLIST_FILE = ios_tesseract/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios_tesseract/ios_tesseract-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +372,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios_tesseract",
+				);
 				INFOPLIST_FILE = ios_tesseract/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios_tesseract/ios_tesseract-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +438,7 @@
 				894612461A92950F0013183F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		894612471A92950F0013183F /* Build configuration list for PBXNativeTarget "ios_tesseractTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +447,7 @@
 				894612491A92950F0013183F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
